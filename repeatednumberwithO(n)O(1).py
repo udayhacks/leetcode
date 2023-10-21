@@ -10,7 +10,26 @@ def repeatedNumber(s) :
         
         
         
-        
+
+
+
+
+
+
+
+
+def repeatedNumbers(s) :
+    
+    #with O(n)  and O(1)
+    pass
+
+
+
+
+
+
+
+
 s = [1,0,2,4,2]
 
 repeatedNumber(s) 
