@@ -4,8 +4,7 @@ def intersect_sort(a,b):
     
     
     while i < len(a) and j <len(b):
-        
-        
+    
         if  a[i] == a[i+1] :
             i +=1
         if b[j] == b[j+1] :
