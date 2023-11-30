@@ -1,9 +1,9 @@
 a = [ 
      
-    [1,2,3] ,
-    [4,5,6] ,
-    [7,8,9]
-    
+    ["a","b","c","d"] ,
+    ["e","f","g","h"],
+    ["i","j","k","l"] ,
+    ["m","n","o","p"]
 ]
 
 
@@ -15,12 +15,9 @@ a = [
     
 ]"""
 
-def transpose(a):
-    for i in range(len(a)):
-        for j in range(len(a)) :
-            print(a[j][i] , " ", end = "")
-        print() 
-        
+def transpose(a) :
+    pass 
+    
         
 def boundaries(a) :
     c = len(a[0])
@@ -38,15 +35,39 @@ def boundaries(a) :
             print(a[0][i],end = '')
         for i in range(1,c-1):
             print(a[i][-1],end = '')
-           
-        for i in range(c-1,-1) :
-            print(a[c-1][i],end= "")
+        i = 0   
+        for i in range(c-1,-1 ,-1) :
+            print(a[r-1][i],end= "")
         
-        for i in range(c-2,0):
-            print(a[0][i],end = "")
+        for i in range(c-2,0,-1):
+            print(a[i][0],end = "")   
+            
+    print()
+            
+            
+            
+            
+def shapeBoun(a) : 
+    c  = len (a[0])
+    r = len(a)
+    for i in range(r) :
+        for  j in range(c) :
+            if i== 0 or i== r-1 :
+                print(a[i][j],end = '')
+            else:
+                if j ==0 or j ==c-1:
+                    print(a[i][j],end="") 
+                else:
+                    print("_",end = "")
+                
+        print()
+                    
+    
 
-
+            
+        
         
 boundaries(a)   
+shapeBoun(a)
         
     
