@@ -19,4 +19,4 @@ def subarr(arr , sum ):
 
 
 
-subarr([10,-2,2,-20,10],-10)
+print(subarr([10,-2,2,-20,10],-10))
