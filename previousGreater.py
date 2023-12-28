@@ -1,0 +1,2 @@
+def previousGreater(l):
+    sta
