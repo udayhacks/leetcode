@@ -1,6 +1,30 @@
 l = [60,20,50,40,10,50,60]
 
 # navie approch
+def largestHistogram(l) :
+    res = 0 
+    for i in range(len(l)) :
+        curr = l[i]
+        
+        for j in range(i-1,-1,-1):
+             if l[i] <= l[j]:
+                curr +=l[i]
+             else:
+                break 
+            
+            
+            
+        for j in range(i+1,len(l)):
+            if l[i] <= l[j]:
+                curr +=l[i]
+            else:
+                break
+            
+            
+        res = max(res, curr)
+    
+    return res 
+                            
 
 
 
@@ -8,8 +32,7 @@ l = [60,20,50,40,10,50,60]
 
 
 
-
-
+largestHistogram(l)
 
 
 
