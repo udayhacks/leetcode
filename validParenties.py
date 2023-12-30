@@ -24,6 +24,6 @@ def parenthesis(s):
 
 
                 
-s = "{((()"
+s = "()[]{}"
 l = parenthesis(s)
 print(l)
