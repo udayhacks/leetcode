@@ -59,5 +59,13 @@ def Spiral(root) :
                 
                 
                 
-Spiral(root)
+#Spiral(root)
+
+
+
+
+from preOrder import preOrder
+
+l= []
+preOrder(root,l=[])
             

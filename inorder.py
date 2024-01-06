@@ -1,8 +1,9 @@
-def inorder(root) :
+def inorder(root,l = []) :
     if root != None :
         inorder(root.left)
-        print(root.data)
+        l.append((root.data))
         inorder(root.right)
+        return l 
         
         
         
