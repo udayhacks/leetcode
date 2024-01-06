@@ -66,7 +66,7 @@ def verticalTraversal(root) :
             
             
     k = (sorted(hash))
-    print(k)
+    #print(k)
     
     
     for i in k :
