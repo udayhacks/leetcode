@@ -1,25 +1,27 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def Diameter(root ) :
+    if root is None :
+        return 0 
+    l = Diameter(root.left)
+    r = Diameter(root.right)
+    m = ((l+r)+1)
+    global res
+    res = max(res,m)
+    return 1+max(l,r)
+    
+    
+    
+    
+    
+    
+res = 0
+    
 
 class node:
     def __init__(self ,data):
         self.left = None 
         self.data = data 
         self.right = None 
-        
-        
+                    
 k = [1,2,3,4,5,6,7,8,9]
 a = node(1)
 b = node(2)
@@ -30,7 +32,6 @@ g = node(6)
 f = node(7)
 h = node(8)
 i = node(9)
-
 
 root = a
 root.left = b
@@ -45,42 +46,4 @@ e.left = i
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def preOrder(root,l=[]):
-    if root != None :
-        l.append(root.data)
-        preOrder(root.left)
-        preOrder(root.right)
-        return l
-        
-        
-print(preOrder(root))
-
-l = preOrder(root)
-
-
+print(Diameter(root))

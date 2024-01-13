@@ -10,41 +10,35 @@ def inorder(root,l = []) :
         
         
 class node:
-    def __init__(self,data) :
+    def __init__(self ,data):
         self.left = None 
         self.data = data 
         self.right = None 
-        
-        
-        
+                    
+k = [1,2,3,4,5,6,7,8,9]
+a = node(1)
+b = node(2)
+c = node(3)
+d = node(4)
+e = node(5)
+g = node(6)
+f = node(7)
+h = node(8)
+i = node(9)
 
 
+root = a
+root.left = b
+root.right = c 
+b.left = d
+b.right= e
+c.left = g
+c.right= f 
+d .left = f 
+d.right  = h
+e.left = i
+ 
 
 
-a = node(10)
-b = node(20)
-c = node(40)
-d=node(50)
-e = node(60)
-f = node(70)
-g = node(30 )
-h = node(32) 
-i = node(21)
-
-
-
-
-a.left = b
-a.right = g
-b.left = c
-b.right = d
-
-d.left = e
-d.right = f
-
-g.left = h
-g.right = i
-
-
-
-
+l = inorder(root)
+print(l)
