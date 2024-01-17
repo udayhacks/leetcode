@@ -5,7 +5,7 @@ def floorBst(root, k):
         ll = curr.val
         
         if curr.val == k :
-            return curr.val 
+            return root
         elif curr.val > k :
             curr = curr.left 
         else :

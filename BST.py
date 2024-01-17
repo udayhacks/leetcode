@@ -1,4 +1,4 @@
-from re import L
+
 
 
 class bst :
@@ -63,7 +63,8 @@ import bstDelete
 bstDelete.delete(root,4)
 print()
 printT(root)
-
+print()
 
 import floorBSt
-floorBSt.floorBst(root,8)
+r = floorBSt.floorBst(root,8)
+print(r)
