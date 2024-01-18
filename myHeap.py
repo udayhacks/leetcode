@@ -11,6 +11,7 @@ class Heap :
         return 2*i+2
     
     def insert(self,val) :
+        # In insertion the val is inserted in the end and it swap the parents and val
         self.arr.append(val)
         i = len(self.arr)-1
         while i > 0 and self.arr[self.parent(i)] > self.arr[i]:
@@ -19,6 +20,9 @@ class Heap :
     
     
     def heapify(self, i) :
+        
+        # these functions adjust the heap  second relation i.e  parent.val is always less than its parent.left.val and parent.right.val
+        
         if i > len(self.arr) :
             return 
         l = self.lchild(i)
@@ -35,15 +39,29 @@ class Heap :
             self.heapify(sml)
             
     def extractMin(self):
+        # here we swap 0 index with last index due to O(1) time complexity
+        
         res = self.arr[0]
-        self.arr[0],self.arr[len(self.arr)-1] = self.arr[len(self.arr)-1] , self.arr[0]
+        self.arr[0] ,self.arr[len(self.arr)-1] = self.arr[len(self.arr)-1] , self.arr[0]
         self.arr.pop()
         self.heapify(0)
         return res
     
     
+    def decrese_key(self,i,val) :
+        # decrease is same like insertion task .............
+        
+        self.arr[i] = val
+        while i > 0 and self.arr[self.parent(i)] > self.arr[i]:
+            self.arr[self.parent(i)] ,self.arr[i] =  self.arr[i],self.arr[self.parent(i)] 
+            i = self.parent(i)
+    
+    
+    
     def printH(self):
         print(*self.arr)
+        
+        
         
         
         
