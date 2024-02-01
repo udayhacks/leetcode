@@ -1,11 +1,10 @@
 def permuations(string,i= 0,ans=[]):
     if i ==len(string):
-        aa="".join(string)
+        aa=(string)
         ans.append(aa)       
     else:
          for j in range(i,len(string)):
             word = list(string)
-
             word[i],word[j] = word[j],word[i]
             permuations(word,i+1,ans)
          
@@ -16,9 +15,9 @@ def permuations(string,i= 0,ans=[]):
 
 
 
-print(permuations("yup"))
+print(permuations([1,2,3]))
 
-
+"""""
 def permuations(string,i= 0,ans=[]):
     if i ==len(string):
         ans.append(string)       
@@ -44,4 +43,4 @@ def p(nums,i ,res=[]):
         
 print(p([1,2,3],0))
         
-print(permuations([1,2,3]))
+print(permuations([1,2,3]))"""""
