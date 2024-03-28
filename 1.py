@@ -1,19 +1,26 @@
 class Solution:
-    def twoSum(self, nums, target: int) :
-        note = {}
+    def maxSubarrayLength(self, nums: List[int], k: int) -> int:
+        
+        i , j = 0, 0
 
-        for i in range(len(nums)) :
+        maxx = 1
+        mapp = {}
 
-            d = target - nums[i] 
-            if d in note :
-                return [note[d], i ]
+        while i < len(nums) and j < len(nums):
+            
+            mapp[nums[j]] = mapp.get(nums[j], 0) + 1
 
-            note[nums[i]] = i  
+            if mapp[nums[j]] > k:
+                maxx = max(j-i, maxx)
+                while mapp[nums[j]]>k:
+                    mapp[nums[i]] -= 1
+                    i = i+1
             
-            
-            
-a = Solution ()
-nums = [2,7,11,15]
-target = 9
-a.twoSum(nums,target)   
-    
+            j += 1 
+
+        return max(maxx, j-i)           
+
+
+
+
+)
