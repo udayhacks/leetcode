@@ -1,5 +1,5 @@
 class Solution:
-    def maxSubarrayLength(self, nums: List[int], k: int) -> int:
+    def maxSubarrayLength(self, nums, k: int) -> int:
         
         i , j = 0, 0
 
@@ -23,4 +23,5 @@ class Solution:
 
 
 
-)
+a= Solution()
+a.
