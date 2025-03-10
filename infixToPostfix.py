@@ -61,14 +61,21 @@ class Conversion:
 
 		while not self.isEmpty():
 			self.output.append(self.pop())
+   
+		return self.output 
 
-		print ("".join(self.output))
+		
+  	
 
 
 # Driver's code
-if __name__ == '_main_':
-	exp = "a+b*(c^d-e)^(f+g*h)-i"
-	obj = Conversion(len(exp))
+
+exp = "a+b*(c^d-e)^(f+g*h)-i"
+obj = Conversion(len(exp))
 
 	# Function call
-	obj.infixToPostfix(exp)
+k = obj.infixToPostfix(exp)
+print(k)
+print("Postfix expression is:" , k)
+ 
+ 

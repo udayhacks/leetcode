@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 s = "the sky is blue"
 
