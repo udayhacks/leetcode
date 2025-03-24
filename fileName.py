@@ -15,7 +15,7 @@ def Creat_array(k ,t ="int"):
     print(j)
 
 
-k = "207"
+k = "3191"
 j = Creat_fileName(k,".cpp")
 try :
     with open(j,'x') as f:
