@@ -15,8 +15,10 @@ def Creat_array(k ,t ="int"):
     print(j)
 
 
-k = "3191"
-j = Creat_fileName(k,".cpp")
+k = "bit++"
+#j = Creat_fileName(k,".cpp")
+
+j = Creat_fileName(k)
 try :
     with open(j,'x') as f:
         f.write("#File create\n")

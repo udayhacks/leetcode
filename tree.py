@@ -18,8 +18,6 @@ p2= node(2)
 root.left = p1
 root.right = p2 
 
-b 
-
 
 
 
