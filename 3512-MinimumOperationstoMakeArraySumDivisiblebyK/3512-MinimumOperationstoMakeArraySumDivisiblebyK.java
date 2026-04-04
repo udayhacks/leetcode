@@ -1,0 +1,10 @@
+// Last updated: 04/04/2026, 17:24:58
+1class Solution {
+2    public int minOperations(int[] nums, int k) {
+3        int sum = 0 ; 
+4        for ( int i = 0 ;i<nums.length;i++){
+5            sum+=nums[i];
+6        }
+7        return sum%k;
+8    }
+9}
